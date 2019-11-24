@@ -27,6 +27,8 @@ The algorithm creates 10 vertices overall:
 4 vertices for patients’ blood types
 4 vertices for blood types coming from the supply
 1 vertex as a source and 1 vertex as a sink
+
+
 Then the vertices are connected with the following edges:
 4 edges from the sink to each of the “supply” vertices - the capacities of the edges are 
 (e.g. edge from the sink to “supply A” vertex has a capacity of ). 
@@ -38,11 +40,18 @@ These edges represent the amount of blood transfused to patients with the four d
 O blood type transfusion)
 3 more edges from “supply A”, “supply B”, and “supply AB” to “AB type patients” vertex
 1 edge from “A supply” to “A type patient” and one more edge from “B supply” to “B type patient”.
+
 Note the last 9 edges described represent which blood types are appropriate for transfusion for the
 4 different patient blood types. All of those 9 edges have a capacity of infinity.
+
+
 (ii) After running the Ford-Fulkerson Algorithm on the graph, we should get the maximum possible flow for this network flow
 problem. According to the flow conservation constraint, we know that the flow into each “patient blood type” 
-node should be equal to the flow out of that node into the sink. We also have a capacity constraint for the edges from the “patient blood type” nodes to the sink; therefore, if the flow through those edges (to the sink) is not saturated then the blood demand is not met. For example, if the demand for A type patients is , and the edge from “A type patient” node to the sink is not saturated, the flow into the “A type patient” node is also less than  (which means the supply is not enough for A type patients). On the other hand, if all edges going into the sink are saturated (flow = capacity), the supply is enough for the demands to be met for each blood type.
+node should be equal to the flow out of that node into the sink.
+
+We also have a capacity constraint for the edges from the “patient blood type” nodes to the sink; therefore, if the flow through those edges (to the sink) is not saturated then the blood demand is not met.
+For example, if the demand for A type patients is , and the edge from “A type patient” node to the sink is not saturated, the flow into the “A type patient” node is also less than  (which means the supply is not enough for A type patients).
+On the other hand, if all edges going into the sink are saturated (flow = capacity), the supply is enough for the demands to be met for each blood type.
 (iii)
 If the blood supply is sufficient, we can look up the flow for all edges from “supply blood type” 
 vertices to “patient blood type” vertices. Those flow values represent the amount of blood sent from 
