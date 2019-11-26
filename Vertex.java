@@ -10,7 +10,7 @@ public class Vertex
     /**Implementing Adjacency List to store neighbors
     of this vertex (as Edge objects)
     **/
-    public List<Edge> neighbors = new Vector<Edge>();
+    //public List<Edge> neighbors = new Vector<Edge>();
 
     public Vertex(String _name, int _id)
     {
