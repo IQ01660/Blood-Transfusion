@@ -2,27 +2,28 @@ import java.util.*;
 
 public class Vertex 
 {
-    /**************
-     * Name Codes
-     *  S - source
-     *  T - sink
-     *  [Blood Type:A/B/AB/O]s - supply of a certain blood type
-     *  [Blood Type:A/B/AB/O]d - demand of a certain blood type
-     **************/
+    
     public String name; 
-    public boolean isSink;
-    public boolean isSource;
+    public int id;
+    public boolean visited;
 
     /**Implementing Adjacency List to store neighbors
     of this vertex (as Edge objects)
     **/
     public List<Edge> neighbors = new Vector<Edge>();
 
-    public Vertex(String _name)
+    public Vertex(String _name, int _id)
     {
         this.name = _name;
-        this.isSink = false;
-        this.isSource = false;
+        this.id = _id;
+    }
+
+    /**
+     * returns the name and id of the vertex as a string
+     */
+    public String toString()
+    {
+        return this.id + " " + this.name;
     }
 
     /**
