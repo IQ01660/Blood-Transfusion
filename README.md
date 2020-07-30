@@ -7,7 +7,7 @@ Suppose you work for a hospital, and your job is to determine whether the curren
 the projected demand over the next week for blood transfusions.
 
 **Unfortunately, it’s not as simple as checking whether the number of liters currently available is greater
-than the number of liters required: people have blood types that constrain the types of blood they can receive.
+than the number of liters required: people have blood types that constrain the types of blood they can receive.**
 
 There are four blood types: ***A, B, AB, and O***. A patient with type-A blood can receive only blood types A or O in 
 a transfusion, a patient with type-B blood can receive only blood types B or O, a patient with type-AB blood 
