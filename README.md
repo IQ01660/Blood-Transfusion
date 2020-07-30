@@ -1,7 +1,7 @@
 # Blood-Transfusion
 Maximizing the amount of blood received by patients using network-flow and Ford-Fulkerson Algorithm 
 
-## Descrription:
+## Description:
 
 Suppose you work for a hospital, and your job is to determine whether the current supply of blood will be enough to meet 
 the projected demand over the next week for blood transfusions.
